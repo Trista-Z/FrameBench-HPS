@@ -1,6 +1,62 @@
-# FrameBench-HPS Experiment
+# FrameBench-HPS: High-Stakes Personal Decision Framing Benchmark
 
-This repository runs model inference for the FrameBench-HPS probability-framing experiment.
+This repository contains scripts for generating and running a controlled framing-effect experiment on large language models (LLMs).
+
+The project studies whether semantically equivalent gain/loss framings change LLM behavior in high-stakes personal decision-support scenarios.
+
+## Research Goal
+
+We evaluate whether LLMs are sensitive to framing in high-stakes personal decision support.
+
+The experiment separates two effects:
+
+1. **Probability sensitivity**  
+   Whether the model rationally changes its recommendation when the probability of a positive outcome changes, e.g., 20%, 40%, 60%, 80%.
+
+2. **Framing sensitivity**  
+   Whether the model changes its recommendation or reasoning style when mathematically equivalent information is expressed as a gain frame or a loss frame.
+
+Example:
+
+- Gain frame: `There is a 70% chance of a positive outcome.`
+- Loss frame: `There is a 30% chance of not achieving a positive outcome.`
+
+## Experimental Design
+
+Base dataset:
+
+- 4 domains
+  - finance
+  - health
+  - education/career
+  - legal/consumer rights
+- 60 scenarios per domain
+- 240 scenarios total
+
+Expanded probability-framing dataset:
+
+- 240 scenarios
+- 4 probability levels
+  - 20% positive / 80% negative
+  - 40% positive / 60% negative
+  - 60% positive / 40% negative
+  - 80% positive / 20% negative
+- 3 frames
+  - neutral
+  - gain
+  - loss
+
+Total prompts:
+
+```text
+240 scenarios × 4 probability levels × 3 frames = 2880 prompts
+```
+
+If using 3 models:
+
+```text
+2880 prompts × 3 models = 8640 model responses
+```
 
 The dataset is already prepared in long format:
 
@@ -24,7 +80,6 @@ The experiment tests whether LLMs respond differently to mathematically equivale
 .
 ├── framebench_hps_probability_long.csv
 ├── run_experiment_long.py
-├── requirements.txt
 └── README.md
 ```
 
@@ -34,7 +89,6 @@ Required files:
 |---|---|
 | `framebench_hps_probability_long.csv` | Input dataset. One row = one prompt. |
 | `run_experiment_long.py` | Main script for running model inference. |
-| `requirements.txt` | Python dependencies. |
 | `README.md` | Running instructions. |
 
 ---
@@ -121,8 +175,6 @@ pip install -r requirements.txt
 ---
 
 ## 5. API Keys
-
-Do not write API keys directly into the Python file.
 
 Set keys through environment variables.
 
