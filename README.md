@@ -1,4 +1,4 @@
-# FrameBench-HPS Experiment Runner
+# FrameBench-HPS Experiment
 
 This repository runs model inference for the FrameBench-HPS probability-framing experiment.
 
