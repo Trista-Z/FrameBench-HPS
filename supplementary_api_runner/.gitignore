@@ -1,0 +1,23 @@
+# Local secrets and Python artifacts
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Inputs must be committed for a runnable supplementary experiment
+work/*
+!work/selected.csv
+!work/split.json
+!work/rewrite_review.csv
+
+# Never commit raw runs, logs, returned results or temporary manifests
+runs/*
+!runs/.gitkeep
+RETURN_TO_AUTHOR/
+RETURN_TO_AUTHOR_RESULTS.zip
+preflight.json
+*.sqlite*
+*.log
