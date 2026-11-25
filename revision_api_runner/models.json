@@ -1,0 +1,94 @@
+{
+  "models": [
+    {
+      "alias": "openai",
+      "api": "openai",
+      "model": "gpt-4o-mini-2024-07-18",
+      "model_env": "",
+      "base_url": "https://api.openai.com/v1",
+      "base_url_env": "OPENAI_BASE_URL",
+      "api_key_env": "OPENAI_API_KEY",
+      "parameters": {
+        "temperature": 0,
+        "max_completion_tokens": 2048
+      }
+    },
+    {
+      "alias": "claude",
+      "api": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "model_env": "",
+      "base_url": "https://api.anthropic.com/v1",
+      "base_url_env": "ANTHROPIC_BASE_URL",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "parameters": {
+        "temperature": 0,
+        "max_tokens": 2048
+      }
+    },
+    {
+      "alias": "gemini",
+      "api": "openai",
+      "model": "gemini-2.5-pro",
+      "model_env": "",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+      "base_url_env": "GEMINI_BASE_URL",
+      "api_key_env": "GEMINI_API_KEY",
+      "parameters": {
+        "temperature": 0,
+        "max_tokens": 8192
+      }
+    },
+    {
+      "alias": "gpt41mini",
+      "api": "openai",
+      "model": "gpt-4.1-mini",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "parameters": {
+        "temperature": 0,
+        "max_completion_tokens": 1500
+      },
+      "base_url_env": "OPENAI_BASE_URL",
+      "model_env": ""
+    },
+    {
+      "alias": "gpt5",
+      "api": "openai",
+      "model": "gpt-5",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "parameters": {
+        "max_completion_tokens": 1500
+      },
+      "base_url_env": "OPENAI_BASE_URL",
+      "model_env": ""
+    },
+    {
+      "alias": "gemini3flash",
+      "api": "openai",
+      "model": "gemini-3-flash-preview",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+      "api_key_env": "GEMINI_API_KEY",
+      "parameters": {
+        "temperature": 0,
+        "max_tokens": 1500
+      },
+      "base_url_env": "GEMINI_BASE_URL",
+      "model_env": ""
+    },
+    {
+      "alias": "qwen",
+      "api": "openai",
+      "model": "qwen3-vl-235b",
+      "base_url": "https://localhost:8000/v1",
+      "api_key_env": "QWEN_API_KEY",
+      "parameters": {
+        "temperature": 0,
+        "max_tokens": 8192
+      },
+      "base_url_env": "QWEN_BASE_URL",
+      "model_env": ""
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.env
+.env.*
+.venv/
+__pycache__/
+runs/
+*.sqlite*
+*.log
+*.zip
+review/
+*E1_outcome_review*.csv
+.DS_Store
